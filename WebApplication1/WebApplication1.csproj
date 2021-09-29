@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ProgSeguraLogin</RootNamespace>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+    <PackageProjectUrl>https://localhost:44331/</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
