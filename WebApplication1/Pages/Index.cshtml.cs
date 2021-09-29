@@ -48,6 +48,7 @@ namespace WebApplication1.Pages
                 }
                 else
                 {
+                    ModelState.AddModelError(string.Empty, "El usuario o la contraseña no son validas");
                     return Page();
 
                 }

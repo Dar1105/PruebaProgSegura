@@ -11,10 +11,10 @@ namespace ProgSeguraLogin.Repositories
         private readonly string ConnectionString = "server=localhost; database=SistemaDeBusquedaDB;Integrated Security=true;";
 
         public bool ValidarUsuario(string usuario, string password)
-        {
+         {
             bool resultado = false;
             using SqlConnection sql = new SqlConnection(ConnectionString);
-            using SqlCommand cmd = new SqlCommand("select count(*) from usuarios where usuario = '" + usuario + "' and[password] = '" + password + "'", sql);
+            using SqlCommand cmd = new SqlCommand("select count(*) from usuarios where usuario = '" + usuario + "' and [password] = '" + password + "'", sql);
             int valor;
 
             sql.Open();
