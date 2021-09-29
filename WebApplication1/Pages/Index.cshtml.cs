@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using ProgSeguraLogin.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -35,8 +36,22 @@ namespace WebApplication1.Pages
         {
             if (ModelState.IsValid)
             {
-                var uno = this.Usuario;
-                var dos = this.Password;
+                var usuario = this.Usuario;
+                var pass = this.Password;
+                var repo = new IndexRepository();
+                
+               if (repo.ValidarUsuario(usuario, pass))
+                {
+
+                    return RedirectToPage("./Prueba");
+
+                }
+                else
+                {
+                    return Page();
+
+                }
+
                 return RedirectToPage("./Prueba");
 
             }
