@@ -27,7 +27,7 @@ namespace ProgSeguraLogin.Repositories
             return resultado;
 
         }
-    } 
+    }
     }
 /*
 

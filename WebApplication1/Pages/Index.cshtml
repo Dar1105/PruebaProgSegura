@@ -15,40 +15,40 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-
+    
     <div class="container">
-        <div class="card">
-            <div>
+        <div class="card card-login">
+            <div class="card-header bg-dark text-white">
                 <h3> Ingreso al Sistema </h3>
             </div>
-            <div>
-                <div>
-                    <label> Usuario </label>
-                    <input /> 
-                </div>
-                <div>
-                    <label> Contraseña </label>
-                    <input />
-                </div>
-                <button> Ingresar </button>
+            <div class="card-body">
+
+                <form method="post">
+                    <div class="form-group">
+                        <label asp-for="Usuario"></label>
+                        <input asp-for="Usuario" type="text" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Usuario"></span>
+
+      
+                    </div>
+                    <div>
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Password"></span>
+
+                    </div>
+                    <button type="submit" class="btn btn-dark"> Ingresar </button>
+                </form>
+             
+                <div asp-validation-summary="All" class="text-danger mt-3" ></div>
             </div>
 
         </div>
-
-
-
-
-
-
-
-
-
-
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    
 </body>
 </html>
